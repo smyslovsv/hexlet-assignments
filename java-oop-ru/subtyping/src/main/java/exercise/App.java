@@ -11,12 +11,12 @@ class App {
         Map<String, String> reversStorage = new HashMap<>();
         Set<String> keys = storage.toMap().keySet();
         for (String key : keys) {
-            reversStorage.put(storage.get(key, "default"), key);
+            reversStorage.put(new String(storage.get(key, "default")), new String(key));
             storage.unset(key);
         }
         Set<String> keys2 = reversStorage.keySet();
-        for (String key : keys) {
-            storage.set(reversStorage.get(key), key);
+        for (String key : keys2) {
+            storage.set(new String(key), new String(reversStorage.get(key)));
         }
     }
 }

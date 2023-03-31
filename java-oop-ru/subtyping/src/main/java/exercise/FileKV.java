@@ -1,15 +1,16 @@
 package exercise;
 
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
 // BEGIN
 class FileKV implements KeyValueStorage {
-    String path = "";
+    private String path;
 
-    public FileKV(String path, KeyValueStorage map) {
+    public FileKV(String path, Map<String, String> map) {
         this.path = path;
-        Utils.writeFile(path, Utils.serialize(map.toMap()));
+        Utils.writeFile(path, Utils.serialize(map));
     }
     @Override
     public void set(String key, String value) {

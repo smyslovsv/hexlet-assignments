@@ -1,22 +1,24 @@
-мая 07, 2023 12:22:30 AM org.apache.coyote.AbstractProtocol init
+мая 07, 2023 1:06:53 AM org.apache.coyote.AbstractProtocol init
 INFO: Initializing ProtocolHandler ["http-nio-auto-1"]
-мая 07, 2023 12:22:31 AM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+мая 07, 2023 1:06:53 AM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
 INFO: Using a shared selector for servlet write/read
-мая 07, 2023 12:22:31 AM org.apache.catalina.core.StandardService startInternal
+мая 07, 2023 1:06:53 AM org.apache.catalina.core.StandardService startInternal
 INFO: Starting service [Tomcat]
-мая 07, 2023 12:22:31 AM org.apache.catalina.core.StandardEngine startInternal
+мая 07, 2023 1:06:53 AM org.apache.catalina.core.StandardEngine startInternal
 INFO: Starting Servlet engine: [Apache Tomcat/8.5.69]
-мая 07, 2023 12:22:32 AM org.apache.coyote.AbstractProtocol start
-INFO: Starting ProtocolHandler ["http-nio-auto-1-57870"]
-мая 07, 2023 12:22:33 AM org.apache.coyote.AbstractProtocol pause
-INFO: Pausing ProtocolHandler ["http-nio-auto-1-57870"]
-мая 07, 2023 12:22:33 AM org.apache.catalina.core.StandardService stopInternal
+мая 07, 2023 1:06:54 AM org.apache.catalina.util.SessionIdGeneratorBase createSecureRandom
+WARNING: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [109] milliseconds.
+мая 07, 2023 1:06:54 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-auto-1-59461"]
+мая 07, 2023 1:06:56 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-auto-1-59461"]
+мая 07, 2023 1:06:56 AM org.apache.catalina.core.StandardService stopInternal
 INFO: Stopping service [Tomcat]
-мая 07, 2023 12:22:34 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesObjectStreamClassCaches
+мая 07, 2023 1:06:57 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesObjectStreamClassCaches
 WARNING: When running on Java 9 or later you need to add "--add-opens=java.base/java.io=null" to the JVM command line arguments to enable ObjectStream cache memory leak protection. Alternatively, you can suppress this warning by disabling ObjectStream class cache memory leak protection.
-мая 07, 2023 12:22:34 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalsForLeaks
+мая 07, 2023 1:06:57 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalsForLeaks
 WARNING: When running on Java 9 or later you need to add "--add-opens=java.base/java.lang=null" to the JVM command line arguments to enable ThreadLocal memory leak detection. Alternatively, you can suppress this warning by disabling ThreadLocal memory leak detection.
-мая 07, 2023 12:22:34 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesRmiTargets
+мая 07, 2023 1:06:57 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesRmiTargets
 WARNING: When running on Java 9 or later you need to add "--add-opens=java.rmi/sun.rmi.transport=null" to the JVM command line arguments to enable RMI Target memory leak detection. Alternatively, you can suppress this warning by disabling RMI Target memory leak detection.
-мая 07, 2023 12:22:34 AM org.apache.coyote.AbstractProtocol stop
-INFO: Stopping ProtocolHandler ["http-nio-auto-1-57870"]
+мая 07, 2023 1:06:58 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-auto-1-59461"]

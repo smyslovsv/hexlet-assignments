@@ -1,0 +1,20 @@
+2023-05-09 00:11:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT ID, TITLE, BODY FROM ARTICLES OFFSET ? LIMIT[*] 10"
+Syntax error in SQL statement "SELECT ID, TITLE, BODY FROM ARTICLES OFFSET ? LIMIT[*] 10"; SQL statement:
+SELECT id, title, body FROM articles OFFSET ? LIMIT 10 [42000-200]
+2023-05-09 00:12:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT ID, TITLE, BODY FROM ARTICLES OFFSET ? LIMIT[*] 10"
+Syntax error in SQL statement "SELECT ID, TITLE, BODY FROM ARTICLES OFFSET ? LIMIT[*] 10"; SQL statement:
+SELECT id, title, body FROM articles OFFSET ? LIMIT 10 [42000-200]
+2023-05-09 00:12:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT ID, TITLE, BODY FROM ARTICLES OFFSET ? LIMIT[*] 10"
+Syntax error in SQL statement "SELECT ID, TITLE, BODY FROM ARTICLES OFFSET ? LIMIT[*] 10"; SQL statement:
+SELECT id, title, body FROM articles OFFSET ? LIMIT 10 [42000-200]
+2023-05-09 00:15:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT ID, TITLE, BODY FROM ARTICLES OFFSET ? LIMIT[*] 10"
+Syntax error in SQL statement "SELECT ID, TITLE, BODY FROM ARTICLES OFFSET ? LIMIT[*] 10"; SQL statement:
+SELECT id, title, body FROM articles OFFSET ? LIMIT 10 [42000-200]
+2023-05-09 00:55:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "page=1"
+Data conversion error converting "page=1"; SQL statement:
+SELECT id, title, body FROM articles WHERE id = ? [22018-200]

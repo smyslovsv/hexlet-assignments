@@ -1,10 +1,8 @@
 package exercise;
 
 // Импортируем зависимости, необходимые для работы приложения
-
 import io.javalin.Javalin;
 import io.javalin.plugin.rendering.template.JavalinThymeleaf;
-
 import static io.javalin.apibuilder.ApiBuilder.path;
 import static io.javalin.apibuilder.ApiBuilder.get;
 import static io.javalin.apibuilder.ApiBuilder.post;
@@ -48,22 +46,19 @@ public final class App {
         app.get("/", RootController.welcome);
 
         // При помощи методов routes() и path() маршруты можно группировать
-//
-//
-//
-//
-//        GET /articles/{id}/delete — вывод страницы с подтверждением удаления статьи
-//        POST /articles/{id}/delete — удаление статьи
+
         // BEGIN
         app.routes(() -> {
             path("articles", () -> {
+                // GET /articles/new — вывод формы создания новой статьи
+                get("new", ArticleController.newArticle);
+
                 // GET /articles — список всех статей
                 get(ArticleController.listArticles);
                 // GET /articles/{id} — просмотр конкретной статьи
                 get("{id}", ArticleController.showArticle);
 
-                // GET /articles/new — вывод формы создания новой статьи
-                get("new", ArticleController.newArticle);
+
                 // POST /articles — создание новой статьи
                 post(ArticleController.createArticle);
 

@@ -69,3 +69,70 @@ Caused by: org.h2.mvstore.MVStoreException: The write format 1 is smaller than t
 	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4118)
 	at org.h2.mvstore.db.Store.<init>(Store.java:133)
 	... 13 more
+2023-05-19 01:58:49 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.212/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.212/5]" [50000-212]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:124)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3349)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:590)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:466)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4118)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at liquibase.database.DatabaseFactory.openConnection(DatabaseFactory.java:255)
+	at liquibase.database.DatabaseFactory.openDatabase(DatabaseFactory.java:149)
+	at liquibase.integration.commandline.CommandLineUtils.createDatabaseObject(CommandLineUtils.java:97)
+	at liquibase.integration.commandline.Main.doMigration(Main.java:1154)
+	at liquibase.integration.commandline.Main.run(Main.java:229)
+	at liquibase.integration.commandline.Main.main(Main.java:143)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.212/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.212/5]" [50000-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 21 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.212/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1065)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:883)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:460)
+	... 15 more
+2023-05-19 01:58:49 database: opening C:/Users/SSV/Hexlet/hexlet-assignments/java-spring-ru/spring-orm/hexlet
+org.h2.message.DbException: Внутренняя ошибка: "The write format 1 is smaller than the supported format 2 [2.1.212/5]"
+General error: "The write format 1 is smaller than the supported format 2 [2.1.212/5]" [50000-212]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:170)
+	at org.h2.mvstore.db.Store.<init>(Store.java:144)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at liquibase.database.DatabaseFactory.openConnection(DatabaseFactory.java:255)
+	at liquibase.database.DatabaseFactory.openDatabase(DatabaseFactory.java:149)
+	at liquibase.integration.commandline.CommandLineUtils.createDatabaseObject(CommandLineUtils.java:97)
+	at liquibase.integration.commandline.Main.doMigration(Main.java:1154)
+	at liquibase.integration.commandline.Main.run(Main.java:229)
+	at liquibase.integration.commandline.Main.main(Main.java:143)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "The write format 1 is smaller than the supported format 2 [2.1.212/5]"
+General error: "The write format 1 is smaller than the supported format 2 [2.1.212/5]" [50000-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 16 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.212/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1065)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:883)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:460)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4118)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	... 13 more

@@ -33,23 +33,24 @@ public class PeopleController {
 
     // BEGIN
     @PostMapping(path = "")
-    public void createPerson(@RequestBody Person person) {
-        // добавляем новую сущность в базу
-        this.personRepository.save(person);
+    public void createPerson(@RequestBody PersonDto personDto) {
+        Person person = new Person();
+        person.setFirstName(personDto.getFirstName());
+        person.setLastName(personDto.getLastName());
+        personRepository.save(person);
     }
+
     @DeleteMapping(path = "/{id}")
     public void deletePerson(@PathVariable long id) {
-        // удаляем сущность из базы по её id
         this.personRepository.deleteById(id);
     }
+
     @PatchMapping(path = "/{id}")
-    public void patchPerson(@PathVariable long id, @RequestBody Person person) {
-
-        Person personPatched = getPerson(id);
-        personPatched.setFirstName(person.getFirstName());
-        personPatched.setLastName(person.getLastName());
-
-        this.personRepository.save(personPatched);
+    public void updatePerson(@PathVariable long id, @RequestBody PersonDto personDto) {
+        Person person = personRepository.findById(id).orElseThrow();
+        person.setFirstName(personDto.getFirstName());
+        person.setLastName(personDto.getLastName());
+        personRepository.save(person);
     }
     // END
 }

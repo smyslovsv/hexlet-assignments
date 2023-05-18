@@ -1,0 +1,26 @@
+plugins {
+  id 'org.springframework.boot' version '2.7.0'
+  id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+  id 'com.adarshr.test-logger' version '3.0.0'
+  id 'java'
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation 'org.springframework.boot:spring-boot-starter-web:3.0.4'
+  implementation 'org.springframework.boot:spring-boot-starter-jdbc:3.0.4'
+  testImplementation 'org.springframework.boot:spring-boot-starter-test:3.0.4'
+  implementation 'org.liquibase:liquibase-core:4.20.0'
+  runtimeOnly 'com.h2database:h2:2.1.214'
+}
+
+test {
+  useJUnitPlatform()
+}
+
+testlogger {
+  showStandardStreams = true
+}

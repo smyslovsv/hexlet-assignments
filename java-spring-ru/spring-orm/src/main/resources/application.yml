@@ -12,7 +12,7 @@ spring:
     password:
 
   liquibase:
-    change-log: classpath:db/changelog/changelog-master.xml.xml
+    change-log: classpath:db/changelog/changelog-master.xml
 
   h2:
     console:

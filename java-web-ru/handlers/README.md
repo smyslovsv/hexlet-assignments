@@ -20,7 +20,7 @@
 List<String> phones = Data.getPhones();
 
 // Получение списка доменных имен
-List<String> phones = Data.getDomains();
+List<String> domains = Data.getDomains();
 ```
 
 ### Подсказки
